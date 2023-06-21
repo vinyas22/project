@@ -1,27 +1,10 @@
-import { Component,OnInit } from '@angular/core';
-import { TestserviceService } from './testservice.service';
-import { User } from './user';
-import { HttpClient } from '@angular/common/http';
-
-
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements  OnInit {
- constructor( ){
+export class AppComponent {
+  title = 'Online_Consultancy';
 }
-  ngOnInit(): void {
-
-    }
-    
-  }
-  
-  
-   
- 
-  
-
-  

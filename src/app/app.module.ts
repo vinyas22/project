@@ -1,24 +1,23 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule, HttpParams,  } from '@angular/common/http';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { PatientLoginComponent } from './patient-login/patient-login.component';
+import { PatientRegisterComponent } from './patient-register/patient-register.component';
 import { FormsModule } from '@angular/forms';
-import { TestserviceService } from './testservice.service';
-import { User } from './user';
-// import { InsertComponent } from './insert/insert.component';
-// import { UpdateComponent } from './update/update.component';
-import { DataComponent } from './data/data.component';
-import { LoginComponent } from './login/login.component';
-import { Router } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+import { PatientserviceService } from './patientservice.service';
+import { DoctorLoginComponent } from './doctor-login/doctor-login.component';
+import { DoctorRegisterComponent } from './doctor-register/doctor-register.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    // InsertComponent,
-    //UpdateComponent,
-    DataComponent,
-    LoginComponent
+    PatientLoginComponent,
+    PatientRegisterComponent,
+    DoctorLoginComponent,
+    DoctorRegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +25,7 @@ import { Router } from '@angular/router';
     HttpClientModule,
     FormsModule
   ],
-  providers: [TestserviceService,HttpParams],
+  providers: [PatientserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
